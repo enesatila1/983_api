@@ -19,6 +19,8 @@ class Auth(SQLModel, table=True):
     user_email: str = Field(index=True, unique=True)
     user_password: str
     created_at: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc))
+        default_factory=lambda: datetime.now(timezone.utc).replace(tzinfo=None)
+    )
     updated_at: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc))
+        default_factory=lambda: datetime.now(timezone.utc).replace(tzinfo=None)
+    )

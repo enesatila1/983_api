@@ -4,8 +4,8 @@
 # ---! DB Models
 from .db.auth import Auth
 
-# ---! DTO Models (Şimdilik boş)
-# from .dto import *
+# ---! DTO Models
+from .dto import UserRegister, UserLogin, UserResponse
 
 # ---! Mapper Models (Şimdilik boş)
 # from .mapper import *
@@ -13,4 +13,7 @@ from .db.auth import Auth
 # ---! Tüm modelleri dışa aktarma listesi
 __all__ = [
     "Auth",
+    "UserRegister",
+    "UserLogin",
+    "UserResponse",
 ]
